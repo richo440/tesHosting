@@ -8,13 +8,16 @@ const NavigationBar = () => {
         <Container> 
           <Navbar.Brand href="/">DINAS PERIKANAN</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Nav className="me-auto"></Nav>
+          <Nav className="me-center"></Nav>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Nav.Link href="#intro">HOME</Nav.Link>
             <Nav.Link href="#trending">TRENDING</Nav.Link>
             <Nav.Link href="#superhero">GALERI</Nav.Link>
-            <Nav.Link href="#superhero">PROFIL</Nav.Link>
+            <NavDropdown title="PROFIL" id="collasible-nav-galeri">
+            <NavDropdown.Item href="#profil">Visi dan Misi</NavDropdown.Item>
+              <NavDropdown.Item href="#profil">Struktur</NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="#bawah">KONTAK</Nav.Link>
           </Nav>
           </Navbar.Collapse>

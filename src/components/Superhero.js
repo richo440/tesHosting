@@ -17,43 +17,19 @@ const SuperHero = () => {
           <Col md={4} className="movieWrapper" id="superhero">
             <Card className="movieImage">
               <Image src={galeriaImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
+              
             </Card>
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
               <Image src={galeribImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
+              
             </Card>
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
               <Image src={galericImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
+              
             </Card>
           </Col>
           <Col md={4} className="movieWrapper">
@@ -63,15 +39,6 @@ const SuperHero = () => {
                 alt="Dune Movies"
                 className="images"
               />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
             </Card>
           </Col>
           <Col md={4} className="movieWrapper">
@@ -81,29 +48,11 @@ const SuperHero = () => {
                 alt="Dune Movies"
                 className="images"
               />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
             </Card>
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
               <Image src={galerifImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center"></Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
             </Card>
           </Col>
         </Row>

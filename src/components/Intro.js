@@ -10,7 +10,7 @@ function Intro() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} id="intro">
       <Carousel.Item>
         <img
           className="d-block w-100"

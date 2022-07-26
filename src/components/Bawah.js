@@ -1,40 +1,43 @@
 import React from 'react';
-import {Row, Col, Container, Col as Column,} from 'react-bootstrap';
-import '../style/Bawah.css';
+import {
+    Row,
+    Container,
+    Col as Column,
+    Nav,
+} from 'react-bootstrap';
 
 
 const Bawah = () => {
     return (
-                <div className='Box'>
-                    <div className='head-foot'>DINAS PERIKANAN KABUPATEN TULANG BAWANG</div>
+        
+                <div className='text-center'>
+                    
                     <br></br>
-                    <br></br>
-                    <Row>
-                    <Col md={4} className="bawah" id="bawah">
-                        <Column>
-                            <h1 className='Column'>Tentang Kami</h1>
-                            <div className='Columns'>Dinas Perikanan</div>
-                            <div className='Columns'>Tulang Bawang</div>
+                    <Row md={4} className="movieWrapper" id="bawah">
+                      <Container>
+                        <Column className='text-center'>
+                            <h1 className='text-white'>SOSIAL MEDIA</h1>
+                            <Nav.Link href="#">Facebook</Nav.Link>
+                            <Nav.Link href="#">Instagram</Nav.Link>
+                            <Nav.Link href="#">Twitter</Nav.Link>
+                            <br></br>
                         </Column>
-                        <Column>
-                            <h1 className='Column'>Pelayanan</h1>
-                            <div className='Columns'>hahaha</div>
-                            <div className='Columns'>huhuhu</div>
+                        <Column className='text-center'>
+                            <h1 className='text-white'>EMAIL</h1>
+                            <Nav.Link href="#">tulangbawang99@gmail.com</Nav.Link>
+                            <br></br>
                         </Column>
-                        <Column>
-                            <h1 className='Column'>Hubungi Kami</h1>
-                            <div className='Columns'>081919862740</div>
-                            <div className='Columns'>081919862777</div>
+                        <Column className='text-center'>
+                            <h1 className='text-white'>CONTACT US</h1>
+                            <Nav.Link href="#">081919862740</Nav.Link>
+                            <Nav.Link href="#">081919862740</Nav.Link>
+                            <br></br>
                         </Column>
-                        <Column>
-                            <h1 className='Column'>Sosial Media</h1>
-                            <div className='Columns'>Facebook</div>
-                            <div className='Columns'>Instagram</div>
-                            <div className='Columns'>Twitter</div>
-                        </Column>
-                        </Col>
+                        </Container>
                     </Row>
+                    <div className='text-white'><br></br><h3>@_DINAS PERIKANAN TULANG BAWANG_@</h3></div>
                 </div>
+            
     );
   };
   export default Bawah;

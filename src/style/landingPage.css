@@ -26,6 +26,12 @@
   background-size: cover;
 }
 
+.bawah {
+  height: auto;
+  background: url("../assets/images/bg/gelap.jpg");
+  background-size: cover;
+}
+
 .movieWrapper {
 }
 
@@ -37,5 +43,5 @@
 }
 
 .images {
-  height: 150px;
+  height: 200px;
 }
