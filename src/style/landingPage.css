@@ -26,6 +26,12 @@
   background-size: cover;
 }
 
+.profil {
+  height: auto;
+  background: url("../assets/images/bg/spiderman.jpg");
+  background-size: cover;
+}
+
 .bawah {
   height: auto;
   background: url("../assets/images/bg/gelap.jpg");

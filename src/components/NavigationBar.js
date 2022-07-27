@@ -15,8 +15,9 @@ const NavigationBar = () => {
             <Nav.Link href="#trending">TRENDING</Nav.Link>
             <Nav.Link href="#superhero">GALERI</Nav.Link>
             <NavDropdown title="PROFIL" id="collasible-nav-galeri">
-            <NavDropdown.Item href="#profil">Visi dan Misi</NavDropdown.Item>
+            <NavDropdown.Item href="#profil">Kepala</NavDropdown.Item>
               <NavDropdown.Item href="#profil">Struktur</NavDropdown.Item>
+              <NavDropdown.Item href="#profil">Visi dan Misi</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#bawah">KONTAK</Nav.Link>
           </Nav>
