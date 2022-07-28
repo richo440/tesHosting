@@ -1,12 +1,12 @@
-import { Card, Container, Row, Col, Image } from "react-bootstrap"
+import { Card, Container,ListGroup, Row, Col, Image } from "react-bootstrap"
 import slideqImage from "../assets/images/trending/slideq.jpeg"
 import rapatImage from "../assets/images/trending/rapat.jpg"
 import mancingImage from "../assets/images/trending/mancing.jpg"
 
 const Trending = () => {
   return (
+    <Container>
     <div>
-      <Container>
         <br />
         <h1 className="text-white">TRENDING</h1>
         <br />
@@ -51,28 +51,78 @@ const Trending = () => {
               </div>
             </Card>
           </Col>
-          <Col md={4} className="movieWrapper">
-            <Card className="movieImage">
-              <Image src={mancingImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">LOMBA MANCING</Card.Title>
-                  <Card.Text className="text-left">
-                    This is a wider card with natural lead-in to additional
-                    content
-                  </Card.Text>
-                  <Card.Text className="text-left">
+          <Col md={4} className="">
+            <Card className="">
+                <ListGroup className=" text-center">
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    Dinas Perikanan Melakukan Penebaran Benih Ika...
+                    <Card.Text className="text-left">
                     Last updated 3 mins ago
                   </Card.Text>
-                </div>
-              </div>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    Dinas Perikanan Tulang Bawang Memulai Apel Pa...
+                    <Card.Text className="text-left">
+                    Last updated 3 mins ago
+                  </Card.Text>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    Kepala Dinas Perikanan Mengikuti Rapat Paripu...
+                    <Card.Text className="text-left">
+                    Last updated 3 mins ago
+                  </Card.Text>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    KEPALA DINAS PERIKANAN KABUPATEN TULANG BAWAN..
+                    <Card.Text className="text-left">
+                    Last updated 3 mins ago
+                  </Card.Text>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    DKP Lampung Mengadakan Pelatihan Pembuatan Garam
+                    <Card.Text className="text-left">
+                    Last updated 3 mins ago
+                  </Card.Text>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    className="cardlist"
+                    action
+                    variant="secondary"
+                  >
+                    DKP Provinsi Lampung Jalin Kerjasama Pengawasan
+                    <Card.Text className="text-left">
+                    Last updated 3 mins ago
+                  </Card.Text>
+                  </ListGroup.Item>
+                </ListGroup>
+               
             </Card>
           </Col>
           <Col>
           </Col>
         </Row>
-      </Container>
     </div>
+    </Container>
   )
 }
 

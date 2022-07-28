@@ -1,72 +1,43 @@
-import { Card, Container, Row, Col, Image } from "react-bootstrap"
-import kepalaImage from "../assets/images/trending/kepala.jpg"
-import strukturImage from "../assets/images/trending/struktur.jpg"
-import visiImage from "../assets/images/trending/visi.jpg"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../style/landingPage.css";
+import React, { Component } from "react";
+import { Row, Container, Nav, ListGroup, Card } from "react-bootstrap";
 
 const Profil = () => {
   return (
-    <div>
+    <>
       <Container>
-        <br />
+      <br />
+      <div className id="profil">
         <h1 className="text-white">PROFIL</h1>
-        <br />
+        <div className="text-white">
+          <br></br>
         <Row>
-          <Col md={4} className="movieWrapper" id="profil">
-            <Card className="movieImage">
-              <Image src={kepalaImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">Drs. EKA SAPUTRA, M.M.</Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                </div>
-              </div>
-            </Card>
-          </Col>
-          <Col md={4} className="movieWrapper">
-            <Card className="movieImage">
-              <Image
-                src={strukturImage}
-                alt="Dune Movies"
-                className="images"
-              />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">
-                    Struktur Organisasi
-                  </Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                  
-                  </Card.Text>
-                </div>
-              </div>
-            </Card>
-          </Col>
-          <Col md={4} className="movieWrapper">
-            <Card className="movieImage">
-              <Image src={visiImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">Visi dan Misi</Card.Title>
-                  <Card.Text className="text-left">
-                  </Card.Text>
-                  <Card.Text className="text-left">
-
-                  </Card.Text>
-                </div>
-              </div>
-            </Card>
-          </Col>
-          <Col>
-          </Col>
-        </Row>
+          <div className="col-lg-6 col-md-12">
+            <img
+              src="http://services.tulangbawangkab.go.id/assets/images/web/13/1635819270Kadis-Eka-Saputra.jpg"
+              style={{ width: "400px", height: "auto" }}
+            />
+          </div>
+          <div className="col-lg-6 col-md-12 align-content-center">
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2>Drs. EKA SAPUTRA, M.M.</h2>
+            <br></br>
+            <h3>Tentang Instansi</h3>
+            <p className="justify">
+            Dinas Perikanan Tulang Bawang diPimpin langsung oleh Drs. Eka Saputra, M.M.
+            <br></br>
+            Dinas Perikanan merupakan unsur pelaksana Otonomi Daerah yang dipimpin oleh seorang Kepala Dinas yang berkedudukan dibawah dan bertanggung jawab kepada Bupati melalui Sekretaris Daerah Kabupaten.
+            </p>
+          </div>
+          </Row>
+        </div>
+      </div>
       </Container>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Profil
+export default Profil;

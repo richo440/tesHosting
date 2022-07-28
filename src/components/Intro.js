@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { Container} from "react-bootstrap"
 
 
 function Intro() {
@@ -10,6 +11,7 @@ function Intro() {
   };
 
   return (
+    <Container>
     <Carousel activeIndex={index} onSelect={handleSelect} id="intro">
       <Carousel.Item>
         <img
@@ -49,6 +51,7 @@ function Intro() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </Container>
   );
 }
 

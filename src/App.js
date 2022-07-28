@@ -30,6 +30,7 @@ function App() {
         <Bawah />
       </div>
     </div>
+    
   )
 }
 

@@ -1,3 +1,8 @@
+.myBG {
+  height: auto;
+  background: url("../assets/images/bg/main.jpg");
+  background-size: cover;
+}
 
 .intro {
   height: 300px;
@@ -31,13 +36,69 @@
   background: url("../assets/images/bg/spiderman.jpg");
   background-size: cover;
 }
+/* Bawah */
 
 .bawah {
   height: auto;
-  background: url("../assets/images/bg/gelap.jpg");
   background-size: cover;
 }
 
+.Box{
+  padding: auto;
+  background: url("../assets/images/bg/navy.jpg");
+  bottom: 1;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+}
+
+.Container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.Row{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,
+                          minmax(185px, 1fr));
+  grid-gap: 20px;
+}
+
+.h1{
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.head-foot{
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Times', cursive;
+  font-weight: 500;
+}
+
+.List {
+  text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+  .footer-wide{
+      display: none;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .footer-narrow{
+      display: none;
+  }
+}
+
+/*  */
 .movieWrapper {
 }
 
@@ -51,3 +112,4 @@
 .images {
   height: 200px;
 }
+
