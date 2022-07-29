@@ -54,6 +54,7 @@ const Trending = () => {
           <Col md={4} className="">
             <Card className="">
                 <ListGroup className=" text-center">
+                <h1 className="text-dark">POPULAR</h1>
                   <ListGroup.Item
                     className="cardlist"
                     action
@@ -100,16 +101,6 @@ const Trending = () => {
                     variant="secondary"
                   >
                     DKP Lampung Mengadakan Pelatihan Pembuatan Garam
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    DKP Provinsi Lampung Jalin Kerjasama Pengawasan
                     <Card.Text className="text-left">
                     Last updated 3 mins ago
                   </Card.Text>

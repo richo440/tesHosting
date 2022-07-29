@@ -19,8 +19,8 @@ const NavigationBar = () => {
             <Nav.Link href="#superhero">GALERI</Nav.Link>
             <NavDropdown title="PROFIL" id="collasible-nav-galeri">
             <NavDropdown.Item href="#profil">Kepala</NavDropdown.Item>
-              <NavDropdown.Item href="#profil">Struktur</NavDropdown.Item>
-              <NavDropdown.Item href="#profil">Visi dan Misi</NavDropdown.Item>
+              <NavDropdown.Item href="https://dinasperikanan.lampungtengahkab.go.id/upload/strukturorganisasi.jpg">Struktur</NavDropdown.Item>
+              <NavDropdown.Item href="https://lumajangkab.go.id/uploads/visimisi/visinew.jpg">Visi dan Misi</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#bawah">KONTAK</Nav.Link>
           </Nav>
