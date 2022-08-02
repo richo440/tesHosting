@@ -4,6 +4,7 @@ import Intro from "./components/Intro"
 import Trending from "./components/Trending"
 import SuperHero from "./components/Superhero"
 import Profil from "./components/Profil"
+import Api from "./components/api"
 import Bawah from "./components/Bawah"
 import "./style/landingPage.css"
 
@@ -20,6 +21,10 @@ function App() {
 
       <div className="superhero">
         <SuperHero />
+      </div>
+
+      <div className="api">
+        <Api />
       </div>
 
       <div className="profil">
