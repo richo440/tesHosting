@@ -9,6 +9,7 @@ import Trending from "./components/Trending"
 import SuperHero from "./components/Superhero"
 import Profil from "./components/Profil"
 import Bawah from "./components/Bawah"
+import Berita from "./components/Berita"
 import "./style/landingPage.css"
 
 function App() {
@@ -26,13 +27,19 @@ function App() {
         <SuperHero />
       </div>
 
+      <div className="berita">
+        <Berita />
+      </div>
+
       <div className="profil">
         <Profil />
       </div>
 
       <div className="bawah">
         <Bawah />
-      </div>
+
+        
+    </div>
     </div>
     
   )
