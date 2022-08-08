@@ -1,120 +1,52 @@
-import { Card, Container,ListGroup, Row, Col, Image } from "react-bootstrap"
-import slideqImage from "../assets/images/trending/slideq.jpeg"
-import rapatImage from "../assets/images/trending/rapat.jpg"
-import mancingImage from "../assets/images/trending/mancing.jpg"
+import axios from 'axios';
+import { React, useState, UseEffect, useEffect } from 'react';
+import { Card, Container, Button, Row } from 'react-bootstrap';
+import '../style/landingPage.css';
 
 const Trending = () => {
-  return (
-    <Container>
-    <div>
-        <br />
-        <h1 className="text-white">TRENDING</h1>
-        <br />
-        <Row>
-          <Col md={4} className="movieWrapper" id="trending">
-            <Card className="movieImage">
-              <Image src={slideqImage} alt="Dune Movies" className="images" />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">HUT TULANG BAWANG</Card.Title>
-                  <Card.Text className="text-left">
-                    This is a wider card with natural lead-in to additional
-                    content
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                </div>
-              </div>
-            </Card>
-          </Col>
-          <Col md={4} className="movieWrapper">
-            <Card className="movieImage">
-              <Image
-                src={rapatImage}
-                alt="Dune Movies"
-                className="images"
-              />
-              <div className="bg-dark">
-                <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">
-                    RAPAT DINAS PERIKANAN
-                  </Card.Title>
-                  <Card.Text className="text-left">
-                    This is a wider card with natural lead-in to additional
-                    content
-                  </Card.Text>
-                  <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                </div>
-              </div>
-            </Card>
-          </Col>
-          <Col md={4} className="">
-            <Card className="">
-                <ListGroup className=" text-center">
-                <h1 className="text-dark">POPULAR</h1>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    Dinas Perikanan Melakukan Penebaran Benih Ika...
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    Dinas Perikanan Tulang Bawang Memulai Apel Pa...
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    Kepala Dinas Perikanan Mengikuti Rapat Paripu...
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    KEPALA DINAS PERIKANAN KABUPATEN TULANG BAWAN..
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="cardlist"
-                    action
-                    variant="secondary"
-                  >
-                    DKP Lampung Mengadakan Pelatihan Pembuatan Garam
-                    <Card.Text className="text-left">
-                    Last updated 3 mins ago
-                  </Card.Text>
-                  </ListGroup.Item>
-                </ListGroup>
-               
-            </Card>
-          </Col>
-          <Col>
-          </Col>
-        </Row>
-    </div>
-    </Container>
-  )
-}
+    const [DataNews, setDataNews] = useState(null);
+    useEffect(() => {
+        getNews();
+        return () => {
+            setDataNews(null);
+        };
+    }, []);
 
-export default Trending
+    function getNews() {
+        const axios = require("axios");
+        axios
+            .get(("http://adminmesuji.embuncode.com/api/news?instansi_id=40&per_page=4"))
+            .then(function(response) {
+                setDataNews(response.data.data.data);
+            })
+            .catch(function(error) {})
+            .then(function() {});
+    }
+    return (
+      <Container>
+        <>
+        <h1 style={{color:"white"}}> BERITA TERBARU</h1>
+        {(DataNews != null) ? 
+            <Row>
+                {
+                    DataNews && DataNews.map((item, index) => {
+                    return (
+                        <Card className='card-news'>
+                            <Card.Body className='card-body'>
+                                <Card.Img className='card-image' src={item.image_file_data} alt="" />
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>{item.content}</Card.Text>
+                                <button>Detail</button>
+                            </Card.Body>
+                        </Card>
+                    )
+                    })
+                }
+            </Row>: ''
+        }
+        </>
+        </Container>
+    );
+};
+
+export default Trending;

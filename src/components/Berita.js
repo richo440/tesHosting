@@ -24,6 +24,7 @@ const News = () => {
     }
     return (
         <>
+        <h1 className=""> Berita</h1>
         {(DataNews != null) ? 
             <Row>
                 {
