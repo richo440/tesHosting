@@ -15,13 +15,13 @@ const NavigationBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Nav.Link href="#intro">HOME</Nav.Link>
-            <Nav.Link href="#trending">TRENDING</Nav.Link>
-            <Nav.Link href="#superhero">GALERI</Nav.Link>
-            <NavDropdown title="PROFIL" id="collasible-nav-galeri">
-            <NavDropdown.Item href="#profil">Kepala</NavDropdown.Item>
-              <NavDropdown.Item href="https://dinasperikanan.lampungtengahkab.go.id/upload/strukturorganisasi.jpg">Struktur</NavDropdown.Item>
-              <NavDropdown.Item href="https://lumajangkab.go.id/uploads/visimisi/visinew.jpg">Visi dan Misi</NavDropdown.Item>
+            <Nav.Link href="#trending">BERITA</Nav.Link>
+            <Nav.Link href="#trending">ARTIKEL</Nav.Link>
+             <NavDropdown title="GALERI" id="collasible-nav-galeri">
+              <NavDropdown.Item href="https://dinasperikanan.lampungtengahkab.go.id/upload/strukturorganisasi.jpg">FOTO</NavDropdown.Item>
+              <NavDropdown.Item href="https://lumajangkab.go.id/uploads/visimisi/visinew.jpg">VIDEO</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#superhero">PROFIL</Nav.Link>
             <Nav.Link href="#bawah">KONTAK</Nav.Link>
           </Nav>
           </Navbar.Collapse>

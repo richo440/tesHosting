@@ -25,6 +25,12 @@
   background-size: cover;
 }
 
+.artikel {
+  height: auto;
+  background: url("../assets/images/bg/scifi.jpg");
+  background-size: cover;
+}
+
 .superhero {
   height: auto;
   background: url("../assets/images/bg/spiderman.jpg");

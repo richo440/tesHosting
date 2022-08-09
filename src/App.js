@@ -10,7 +10,7 @@ import SuperHero from "./components/Superhero"
 import Profil from "./components/Profil"
 import Bawah from "./components/Bawah"
 import Berita from "./components/Berita"
-import Artikel from "./components/artikel"
+import Artikel from "./components/Artikel"
 import "./style/landingPage.css"
 
 function App() {
@@ -20,8 +20,13 @@ function App() {
         <NavigationBar />
         <Intro />
       </div>
+
       <div className="trending">
         <Trending />
+      </div>
+
+      <div className="artikel">
+        <Artikel />
       </div>
 
       <div className="superhero">
@@ -34,7 +39,6 @@ function App() {
 
       <div className="bawah">
         <Bawah />
-
         
     </div>
     </div>
