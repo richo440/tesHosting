@@ -3,7 +3,6 @@
     align-items: center;
     width: 20rem;
     height: auto;
-    box-shadow: 2px 5px 6px grey;
   }
   
   .card-body {
@@ -14,6 +13,7 @@
   }
   
   .card-image {
+    background: url("../assets/images/bg/navy.jpg");
     width: 100%;
     height: 200px;
   }

@@ -1,7 +1,13 @@
-import { Card, Navbar, NavDropdown, Container, Nav } from "react-bootstrap"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import {Link} from "react-router-dom";
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Card from "react-bootstrap/Card";
 
-const NavigationBar = () => {
+function NavigationBar (){
   return (
+    <>
     <Container>
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -14,20 +20,20 @@ const NavigationBar = () => {
           <Nav className="me-center"></Nav>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="#intro">HOME</Nav.Link>
-            <Nav.Link href="#trending">BERITA</Nav.Link>
-            <Nav.Link href="#trending">ARTIKEL</Nav.Link>
+            <Nav.Link as={Link} to="/">HOME</Nav.Link>
+            <Nav.Link as={Link} to="/Isiberita">BERITA</Nav.Link>
+            <Nav.Link as={Link} to="/Isiartikel">ARTIKEL</Nav.Link>
              <NavDropdown title="GALERI" id="collasible-nav-galeri">
-              <NavDropdown.Item href="https://dinasperikanan.lampungtengahkab.go.id/upload/strukturorganisasi.jpg">FOTO</NavDropdown.Item>
-              <NavDropdown.Item href="https://lumajangkab.go.id/uploads/visimisi/visinew.jpg">VIDEO</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Isifoto">FOTO</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Isivideo">VIDEO</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#superhero">PROFIL</Nav.Link>
-            <Nav.Link href="#bawah">KONTAK</Nav.Link>
+            <Nav.Link as={Link} to="#superhero">PROFIL</Nav.Link>
+            <Nav.Link as={Link} to="#bawah">KONTAK</Nav.Link>
           </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="#login">LOGIN</Nav.Link>
+            <Nav.Link as={Link} to="#login">LOGIN</Nav.Link>
             <Nav.Link eventKey={2} href="#keluar">KELUAR</Nav.Link>
           </Nav>
           </Navbar.Collapse>
@@ -35,6 +41,7 @@ const NavigationBar = () => {
       </Navbar>
     </div>
     </Container>
+    </>
   )
 }
 
