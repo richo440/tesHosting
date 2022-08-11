@@ -1,58 +1,48 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { Container} from "react-bootstrap"
+import { Container } from '@mui/material';
+import axios from 'axios';
+import {React, useState, useEffect} from 'react';
+import {Carousel} from 'react-bootstrap';
+import { sliderNews } from '../Apinya';
+import '../style/slide.css'
 
-
-function Intro() {
+const Intro = () => {
   const [index, setIndex] = useState(0);
+    const [DataSlider, setDataSlider] = useState(null);
+    useEffect(() => {
+        getSlider();
+        return () => {
+          setDataSlider(null);
+        };
+    }, []);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+    function getSlider() {
+      axios
+          .get(sliderNews)
+          .then (function(response){
+            setDataSlider(response.data.data.data);})
+          .catch(function(error) {})
+          .then (function() {});
+          }
 
   return (
-    <Container>
-    <Carousel activeIndex={index} onSelect={handleSelect} id="intro">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="http://perikanan.sukabumikab.go.id/assets/images/slider/3b95d253b129ca84180a5119bf205469.JPG"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="http://perikanan.sukabumikab.go.id/assets/images/slider/3b95d253b129ca84180a5119bf205469.JPG"
-          
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="http://perikanan.sukabumikab.go.id/assets/images/slider/3b95d253b129ca84180a5119bf205469.JPG"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3></h3>
-          <p>
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </Container>
+    <>
+      {(DataSlider != null) ? 
+          <Carousel className='slider-body'>
+              {
+                DataSlider && DataSlider.map((item, index) => {
+                return (
+                  <Carousel.Item>
+                    <img className='slide' src={item.image_file_data}/>
+                    <Carousel.Caption className='slide-capt'>{item.title}</Carousel.Caption>
+                  </Carousel.Item>
+                )
+              })
+            }
+          </Carousel>: ''
+        }
+    </>
   );
 }
+
 
 export default Intro;

@@ -8,9 +8,9 @@ import Card from "react-bootstrap/Card";
 function NavigationBar (){
   return (
     <>
-    <Container>
+
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <img src=  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png/663px-LOGO_KABUPATEN_TULANG_BAWANG.png" width={100} height={100}></img>
         <Container> 
           <Navbar.Brand style={{color:"white"}} href="/">DINAS PERIKANAN
@@ -40,7 +40,6 @@ function NavigationBar (){
         </Container>
       </Navbar>
     </div>
-    </Container>
     </>
   )
 }

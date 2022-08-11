@@ -4,6 +4,8 @@ import React from "react";
 import { Card, Container, Row, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { artikelNews } from '../Apinya';
+import NavigationBar from "../components/NavigationBar";
+import Bawah from "../components/Bawah";
 
 const Trending = () => {
   const [DataNews, setDataNews] = useState(null);
@@ -29,7 +31,8 @@ const Trending = () => {
   return (
     
       <>
-        <h1 style={{color:"white"}}> __BERITA TERBARU__</h1>
+      <NavigationBar/>
+        <h1 className='berita-header'> INI BERITA</h1>
         {(DataNews != null) ? 
             <Row className='news-row'>
                 {
@@ -46,6 +49,7 @@ const Trending = () => {
                     )
                     })
                 }
+                <Bawah/>
             </Row>: ''
         }
         </>

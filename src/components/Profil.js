@@ -1,43 +1,77 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../style/landingPage.css";
-import React, { Component } from "react";
-import { Row, Container, Nav, ListGroup, Card } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Card, Button, Row } from "react-bootstrap";
+import axios from "axios";
+
+import '../style/profil.css';
+import { instansi } from "../Apinya";
 
 const Profil = () => {
-  return (
-    <>
-      <Container>
-      <br />
-      <div className id="profil">
-        <h1 className="text-white">PROFIL</h1>
-        <div className="text-white">
-          <br></br>
-        <Row>
-          <div className="col-lg-6 col-md-12">
-            <img
-              src="http://services.tulangbawangkab.go.id/assets/images/web/13/1635819270Kadis-Eka-Saputra.jpg"
-              style={{ width: "400px", height: "auto" }}
-            />
-          </div>
-          <div className="col-lg-6 col-md-12 align-content-center">
-            <br></br>
-            <br></br>
-            <br></br>
-            <h2>Drs. EKA SAPUTRA, M.M.</h2>
-            <br></br>
-            <h3>Tentang Instansi</h3>
-            <p className="justify">
-            Dinas Perikanan Tulang Bawang diPimpin langsung oleh Drs. Eka Saputra, M.M.
-            <br></br>
-            Dinas Perikanan merupakan unsur pelaksana Otonomi Daerah yang dipimpin oleh seorang Kepala Dinas yang berkedudukan dibawah dan bertanggung jawab kepada Bupati melalui Sekretaris Daerah Kabupaten.
-            </p>
-          </div>
-          </Row>
+
+    const [newsCard, getNewsCard] = useState(null)
+    const widthPicture = '24rem'
+
+
+    useEffect(() => {
+        axios.get(instansi)
+            .then(function (response) {
+
+                getNewsCard(response.data.data)
+                console.log('response.data.data');
+                console.log(response.data.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }, []);
+
+    return (
+      <Row>
+        <div className="all">
+            <div className="grip-article">
+            <h1 style={{color:"white"}} className=''>__PROFIL__</h1>
+
+                {newsCard != null ? <div className="aparat">
+
+                    <Card style={{ width: widthPicture }} className='card-aparat' >
+                        <Card.Img variant="top" src={newsCard.foto_kepala} className="image" />
+                        <Card.Body className="body-card">
+                            <Card.Title className="title-card">{newsCard.nama_kepala}</Card.Title>
+                            
+                        </Card.Body>
+                        <Card.Text className="body-card">Kepala</Card.Text>
+                    </Card>
+
+                    <Card style={{ width: widthPicture }} className='card-aparat' >
+                        <Card.Img variant="top" src={newsCard.foto_wakil_kepala} className="image" />
+                        <Card.Body className="body-card">
+                            <Card.Title className="title-card">{newsCard.nama_wakil_kepala}</Card.Title>
+                            
+
+                        </Card.Body>
+                        <Card.Text className="body-card">Wakil Kepala</Card.Text>
+                    </Card>
+
+                    <Card style={{ width: widthPicture }}  >
+                        <Card.Img variant="top" src={newsCard.foto_sekretaris} className="image" />
+                        <Card.Body className="body-card">
+                            <Card.Title className="title-card">{newsCard.nama_sekretaris}</Card.Title>
+                            
+
+                        </Card.Body>
+                        <Card.Text className="body-card">Sekretaris</Card.Text>
+                    </Card>
+
+                </div>
+
+                    : <p>Loading</p>
+                }
+
+
+            </div>
         </div>
-      </div>
-      </Container>
-    </>
-  );
-};
+        </Row>
+    );
+}
 
 export default Profil;

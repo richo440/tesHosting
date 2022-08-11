@@ -3,6 +3,8 @@ import { Card, Button, Row } from 'react-bootstrap';
 import '../style/artikel.css';
 import { artikelMain } from '../Apinya';
 import { Link } from 'react-router-dom';
+import NavigationBar from "../components/NavigationBar";
+import Bawah from "../components/Bawah";
 
 const Artikel = () => {
     const [DataArtikel, setDataArtikel] = useState(null);
@@ -25,7 +27,8 @@ const Artikel = () => {
     }
     return (
         <>
-        <h1 style={{color:"white"}} className=''>__ARTIKEL TERBARU__</h1>
+        <NavigationBar/>
+        <h1 className='berita-header'> INI ARTIKEL</h1>
         {(DataArtikel != null) ? 
             <Row className='artikel-row'>
                 {
@@ -42,7 +45,9 @@ const Artikel = () => {
                     )
                     })
                 }
+                <Bawah/>
             </Row>: ''
+
         }
         </>
     );

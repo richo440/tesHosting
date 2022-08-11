@@ -33,7 +33,7 @@
 
 .superhero {
   height: auto;
-  background: url("../assets/images/bg/spiderman.jpg");
+  background: url("../assets/images/bg/navy.jpg");
   background-size: cover;
 }
 
@@ -103,19 +103,3 @@ margin: 0 auto;
       display: none;
   }
 }
-
-/*  */
-.movieWrapper {
-}
-
-.movieImage {
-  height: auto;
-  background-color: black;
-  margin: 5px;
-  padding: 5px;
-}
-
-.images {
-  height: 200px;
-}
-
