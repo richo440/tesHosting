@@ -15,10 +15,6 @@ const Bawah = () => {
         <Box className='Box'>
                 <div id="bawah" className='footer-wide'>
                 <br></br>
-                <br></br>
-                <div className='head-foot'>DINAS PERIKANAN KABUPATEN TULANG BAWANG</div>
-                <br></br>
-                <br></br>
                     <Row>
                         <Column className='List'>
                             <h1 className='Column'>SOSIAL MEDIA</h1>
@@ -38,6 +34,10 @@ const Bawah = () => {
                             <Nav.Link href="https://api.whatsapp.com/send/?phone=6282269647389&text&type=phone_number&app_absent=0">082269647389</Nav.Link>
                             <br></br>
                         </Column>
+                        <hr/>
+                        <p className="head-foot">
+            &copy;{new Date().getFullYear()} PT. MICRODATA INDONESIA 
+          </p>
                     </Row>
                 </div>
                 <div className='footer-narrow'>
@@ -62,6 +62,10 @@ const Bawah = () => {
                             <div href="#">082269647389</div>
                             <br></br>
                         </Column>
+                        <hr/>
+                        <p className="head-foot">
+            &copy;{new Date().getFullYear()} PT. MICRODATA INDONESIA 
+          </p>
                     </Row>
                 </div>
         </Box>

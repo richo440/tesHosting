@@ -1,0 +1,24 @@
+.DokumenT{
+    height: 650px;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.dokumenH{
+    display: flex;
+    align-content: center;
+}
+
+.berita-header {
+    display: flex;
+    margin: 20px;
+    font-size: 3rem;
+    justify-content: center;
+  }
+
+  .dokumen-card{
+    padding-inline-start: 50px;
+    padding-inline-end: 0px;
+}

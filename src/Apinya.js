@@ -4,5 +4,5 @@ export const artikelMain = "http://adminmesuji.embuncode.com/api/article?instans
 export const artikelDetail = "http://adminmesuji.embuncode.com/api/article/"
 export const sliderNews = "http://adminmesuji.embuncode.com/api/news?instansi_id=8&per_page=3"
 export const galeriImg = "http://adminmesuji.embuncode.com/api/image-gallery/"
-export const dokumenList = "http://adminmesuji.embuncode.com/api/dokumen?instansi_id=3&per_page=5"
+export const dokumenList = "http://adminmesuji.embuncode.com/api/dokumen?instansi_id=40"
 export const instansi = "http://adminmesuji.embuncode.com/api/instansi/detail/40"

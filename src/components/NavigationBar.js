@@ -27,13 +27,13 @@ function NavigationBar (){
               <NavDropdown.Item as={Link} to="/Isifoto">FOTO</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/Isivideo">VIDEO</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="#superhero">PROFIL</Nav.Link>
-            <Nav.Link as={Link} to="#bawah">KONTAK</Nav.Link>
+            <Nav.Link as={Link} to="/Isiprofil">PROFIL</Nav.Link>
+            <Nav.Link as={Link} to="/Isidokumen">DOKUMEN</Nav.Link>
           </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link as={Link} to="#login">LOGIN</Nav.Link>
+            <Nav.Link as={Link} to="/Login">LOGIN</Nav.Link>
             <Nav.Link eventKey={2} href="#keluar">KELUAR</Nav.Link>
           </Nav>
           </Navbar.Collapse>
