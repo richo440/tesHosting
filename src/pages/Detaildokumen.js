@@ -31,14 +31,14 @@ function Detaildokumen() {
         <NavigationBar/>
             {
                 (DataDetaildokumen != null) ?
-                <div className="container py-5 mt-5">
-                    <div className='container'>
-                    <div className='row'>
+                <div className="detailDoc-page">
+                    <div className='split-view-detailDoc'>
+                    <div className='"detailDoc-title"'>
                         <article>
                             {DataDetaildokumen[0].description_dokumen}
                         </article>
                     </div>
-                    <div className='dokumen-card'>
+                    <div className="the-file-document">
                         <iframe
                             src={"data:application/pdf;base64," + DataDetaildokumen[0].dokumen_file_data}
                             frameBorder="0"

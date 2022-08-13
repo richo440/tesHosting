@@ -36,8 +36,7 @@ function Beranda() {
 
       <div className="bawah">
         <Bawah />
-        
-    </div>
+        </div>
     </div>
     
   )

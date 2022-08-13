@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import {
     Row,
     Col as Column,
@@ -6,69 +7,60 @@ import {
 } from 'react-bootstrap';
 import '../style/landingPage.css';
 import Box from '@mui/material/Box';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
+function Bawah(){
+  const [BawahData, setBawahData] = useState([]);
+  useEffect(() => {
+      axios
+        .get("http://adminmesuji.embuncode.com/api/instansi/detail/40")
+        .then(function (Bawah) {
+          setBawahData(Bawah.data.data);
+          console.log("console header: " + Bawah.data.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }, []);
 
-const Bawah = () => {
-    return (
-        <Box className='Box'>
+  return(
+    <Box className='Box'>
                 <div id="bawah" className='footer-wide'>
                 <br></br>
-                    <Row>
+    <>
+      <Row>
                         <Column className='List'>
-                            <h1 className='Column'>SOSIAL MEDIA</h1>
-                            <Nav.Link href="https://www.facebook.com/profile.php?id=100008302428718&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_transition=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true">Facebook</Nav.Link>
-                            <Nav.Link href="https://www.instagram.com/richofajarpratama04/?hl=id">Instagram</Nav.Link>
-                            <Nav.Link href="https://twitter.com/150Racing">Twitter</Nav.Link>
+                            <h3 className='Column'>ALAMAT</h3>
+                            <p className="text">{BawahData.alamat}</p>
                             <br></br>
                         </Column>
+
                         <Column className='List'>
-                            <h1 className='Column'>EMAIL</h1>
-                            <Nav.Link href="https://mail.google.com/mail/u/0/#inbox">tulangbawang@gmail.com</Nav.Link>
+                            <h3 className='Column'>EMAIL</h3>
+                            <p className="text">{BawahData.email}</p>
                             <br></br>
                         </Column>
+                        
                         <Column className='List'>
-                            <h1 className='Column'>CONTACT US</h1>
-                            <Nav.Link href="https://api.whatsapp.com/send/?phone=6281919862740&text&type=phone_number&app_absent=0">081919862740</Nav.Link>
-                            <Nav.Link href="https://api.whatsapp.com/send/?phone=6282269647389&text&type=phone_number&app_absent=0">082269647389</Nav.Link>
-                            <br></br>
-                        </Column>
-                        <hr/>
-                        <p className="head-foot">
-            &copy;{new Date().getFullYear()} PT. MICRODATA INDONESIA 
-          </p>
-                    </Row>
-                </div>
-                <div className='footer-narrow'>
-                    <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN TULANG BAWANG</div>
-                    <br></br>
-                    <Row>
-                        <Column className='List'>
-                            <h1 className='Column'>SOSIAL MEDIA</h1>
-                            <div href="#">Facebook</div>
-                            <div href="#">Instagram</div>
-                            <div href="#">Twitter</div>
-                            <br></br>
-                        </Column>
-                        <Column className='List'>
-                            <h1 className='Column'>EMAIL</h1>
-                            <div href="#">tulangbawang@gmail.com</div>
-                            <br></br>
-                        </Column>
-                        <Column className='List'>
-                            <h1 className='Column'>CONTACT US</h1>
-                            <div href="#">081919862740</div>
-                            <div href="#">082269647389</div>
+                            <h3 className='Column'>CONTACT US</h3>
+                            <Nav.Link href="https://api.whatsapp.com/send/?phone=6281919862740&text&type=phone_number&app_absent=0">{BawahData.nomor_telepon}</Nav.Link>
+                            <Nav.Link href="https://api.whatsapp.com/send/?phone=6282269647389&text&type=phone_number&app_absent=0">{BawahData.nomor_telepon}</Nav.Link>
                             <br></br>
                         </Column>
                         <hr/>
-                        <p className="head-foot">
-            &copy;{new Date().getFullYear()} PT. MICRODATA INDONESIA 
+                        <p className="head-haha">
+            &copy;{new Date().getFullYear()} DINAS PERIKANAN TULANG BAWANG
+          </p>
+          <p className="head-haha">
+         Richo Fajar Pratama PKL Mikrodata
+          </p>
+          <p className="head-haha">
+         --__--
           </p>
                     </Row>
-                </div>
-        </Box>
-    );
-  };
-  export default Bawah;
+    </>
+    </div>
+    </Box>
+  );
+}
+
+export default Bawah;

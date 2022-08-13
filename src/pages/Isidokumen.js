@@ -36,8 +36,10 @@ function Dokumen() {
       {
         (DataResponse != null) ? 
          
-              <div className="row">
-                <div className="berita-halaman">
+              <div className="document-page">
+                <div className="split-view-document">
+                <div className="row">
+                <div className="the-document">
                 <h1 className='berita-header'> INI DOKUMEN</h1>
                   <br></br>
                   <br></br>
@@ -46,11 +48,12 @@ function Dokumen() {
         {
           DataResponse && DataResponse.map((index) => {
             return (
-              <div className="bg container-fluid mt-5">
-                <div className="container">
-                  <div className="row">
+              <div className="the-sub-document">
+                <div className="document-name">
+                  <div className="document-file-name">
+                  <div className="document-file ">
                 <Card>
-                    hahaha
+                  DOKUMEN
                     <Card>
                 <Card.Body>
                     <Card.Title>{index.dokumen_item[0].dokumen_file_name}</Card.Title>
@@ -63,9 +66,13 @@ function Dokumen() {
           </div>
           </div>
           </div>
+          </div>
+          
             )
           })
         }
+        </div>
+        </div>
         </div>: ''
       }
       <br></br>

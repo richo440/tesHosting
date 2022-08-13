@@ -36,9 +36,7 @@ const Isifoto = () => {
          
               <div className="row">
                 <div className="berita-header">
-                  <h1>Halaman Foto</h1>
-                  <br></br>
-                  <br></br>
+                  <h1>Take a look at some of our Aktivities and Memories</h1>
                 </div>
                 
         {

@@ -35,7 +35,7 @@ const Isivideo = () => {
          
               <div className="">
                 <div className="berita-header">
-                  <h1>HALAMAN VIDEO</h1>
+                  <h1>Take a look at some of our Aktivities and Memories</h1>
                 </div>
                 
         {

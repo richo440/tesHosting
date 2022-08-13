@@ -31,7 +31,7 @@ const Isiprofil = () => {
         <NavigationBar/>
         <div className="all">
             <div className="">
-            <h1 className='berita-header'>INI PROFIL</h1>
+            <h1 className='berita-header'>PROFIL STRUKTUR</h1>
 
                 {newsCard != null ? <div className="aparat">
 
