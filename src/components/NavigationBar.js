@@ -33,8 +33,7 @@ function NavigationBar (){
           </Navbar.Collapse>
           <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link as={Link} to="/Login">LOGIN</Nav.Link>
-            <Nav.Link eventKey={2} href="#keluar">KELUAR</Nav.Link>
+            
           </Nav>
           </Navbar.Collapse>
         </Container>
