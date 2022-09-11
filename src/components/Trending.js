@@ -29,7 +29,7 @@ const Trending = () => {
   return (
     
       <>
-        <h1 style={{color:"white"}}> __BERITA TERBARU__</h1>
+        <h5 style={{color:"black"}}> __BERITA TERBARU__</h5>
         {(DataNews != null) ? 
             <Row className='news-row'>
                 {

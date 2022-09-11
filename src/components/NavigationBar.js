@@ -31,12 +31,6 @@ function NavigationBar (){
             <Nav.Link as={Link} to="/Isidokumen">DOKUMEN</Nav.Link>
           </Nav>
           </Navbar.Collapse>
-          <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
-          <Nav.Link as={Link} to="/">LOGIN</Nav.Link>
-            <Nav.Link as={Link} to="/">KELUAR</Nav.Link>
-          </Nav>
-          </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
@@ -44,4 +38,4 @@ function NavigationBar (){
   )
 }
 
-export default NavigationBar
+export default NavigationBar;
